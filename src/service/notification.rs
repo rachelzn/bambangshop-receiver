@@ -30,7 +30,7 @@ impl NotificationService{
             .header("Content-Type", "application/json")
             .header("Accept", "application/json")
             .body(to_string(&payload).unwrap())
-            .send.await;
+            .send().await;
         log::warn_!("Sent subscribe request to: {}", request_url);
 
         return match request {
