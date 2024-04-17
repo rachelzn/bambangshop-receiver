@@ -68,16 +68,16 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement list_all_as_string function in Notification repository.`
     -   [x] Write answers of your learning module's "Reflection Subscriber-1" questions in this README.
 -   **STAGE 3: Implement services and controllers**
-    -   [ ] Commit: `Create Notification service struct skeleton.`
-    -   [ ] Commit: `Implement subscribe function in Notification service.`
-    -   [ ] Commit: `Implement subscribe function in Notification controller.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification service.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification controller.`
-    -   [ ] Commit: `Implement receive_notification function in Notification service.`
-    -   [ ] Commit: `Implement receive function in Notification controller.`
-    -   [ ] Commit: `Implement list_messages function in Notification service.`
-    -   [ ] Commit: `Implement list function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
+    -   [x] Commit: `Create Notification service struct skeleton.`
+    -   [x] Commit: `Implement subscribe function in Notification service.`
+    -   [x] Commit: `Implement subscribe function in Notification controller.`
+    -   [x] Commit: `Implement unsubscribe function in Notification service.`
+    -   [x] Commit: `Implement unsubscribe function in Notification controller.`
+    -   [x] Commit: `Implement receive_notification function in Notification service.`
+    -   [x] Commit: `Implement receive function in Notification controller.`
+    -   [x] Commit: `Implement list_messages function in Notification service.`
+    -   [x] Commit: `Implement list function in Notification controller.`
+    -   [x] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
 
 ## Your Reflections
 This is the place for you to write reflections:
@@ -90,3 +90,8 @@ This is the place for you to write reflections:
 2. Why doesn’t Rust allow mutating the content of a static variable via a static function? — Rust prioritizes thread safety, and allowing mutable static variables could lead to data races, which are problematic. Mutable statics also clash with Rust’s strict ownership and borrowing principles, as they are globally accessible and can be modified from anywhere in the program. Additionally, static variables are meant to be initialized once in a predictable manner, especially important in concurrent environments.
 
 #### Reflection Subscriber-2
+1. Exploration outside the tutorial: I looked beyond what the tutorial showed and checked out `src/lib.rs`. Basically, the code is getting our app ready to talk to the web with an HTTP client. It also takes care of loading settings from the usual defaults and the environment variables we set. And if things go wrong, it sorts out the errors and tells the users what’s happening in a way they can understand.
+
+2. How does the observer pattern make it easier to add more subscribers?: Without the observer pattern, it would be hard to handle duplicates. The pattern is there so that we can create copies of the receiver app.
+
+3. About self-made test: Yes, it is useful. Generating fake test data is quite useful if I don't want to hard code the dummy data that I want to use. I get to see how well-put the implementation is. I get to make tests seeing if the use case is as correct as how I want it.
